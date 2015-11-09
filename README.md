@@ -43,6 +43,9 @@ The variables that can be passed to this role and a brief description about them
     # Labels
     newrelic_labels: ['environment:production']
 
+    # Hostname displayed in the New Relic UI
+    newrelic_hostname: 'your_server.production'
+
 ## Examples
 
 ### Paramaterized Role
