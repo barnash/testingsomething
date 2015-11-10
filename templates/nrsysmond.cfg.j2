@@ -133,3 +133,15 @@ collector_host={{ newrelic_collector_host }}
 # Default: 30
 #
 timeout={{ newrelic_timeout }}
+
+#
+# Option : labels
+# Value  : A dictionary of colon-separated label names and values for categories
+#          that will be applied to the data sent from this agent.
+# Default: none
+#
+{% if newrelic_labels is defined %}
+labels={{ newrelic_labels|join(';') }};
+{% else %}
+#labels=
+{% endif %}
